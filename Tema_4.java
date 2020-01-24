@@ -172,31 +172,35 @@ public static void ejercicio14(){
     //(Ten en cuenta la división por cero).
     public static void ejercicio10()
     {
-    Scanner teclado10 = new Scanner(System.in);
-    double num1;
-    double num2;
-    double suma;
-    double resta;
-    double division;
-    double producto;
-    System.out.println("Por favor, introduzca el primer número");
-    num1 = teclado10.nextDouble();
-    System.out.println("Por favor, introduzca el segundo número");
-    num2 = teclado10.nextDouble();
-    suma = num1 + num2;
-    resta = num1 - num2;
-    producto = num1 * num2;
-    System.out.println("La suma de " + num1 + " más " + num2 + " vale " + suma);
-    System.out.println("La resta de " + num1 + " menos " + num2 + " vale " + resta);
-    System.out.println("El producto de " + num1 + " por " + num2 + " vale " + producto);
-    if(num2 == 0)
-    {
-        System.out.println("Error al dividir por cero");
-    }else{
-        division = num1 / num2;
-        System.out.println("La división de " + num1 + " y " + num2 + " es " + division);
-    }
-    
+        System.out.println("opera 2 números teniendo encuenta la division por 0");
+        System.out.println();
+        Scanner teclado = new Scanner(System.in);
+        double num1, num2, suma, resta, producto, division;
+        System.out.print("Teclee el primer número, por favor: ");
+        num1 = teclado.nextDouble();
+        System.out.print("Teclee el segundo número, por favor: ");
+        num2 = teclado.nextDouble();
+        suma = num1 + num2;
+        resta = num1 - num2;
+        producto = num1 * num2;
+        
+        System.out.println(num1 + " + " + num2 + " = " + suma);
+        System.out.println(num1 + " - " + num2 + " = " + resta);
+        System.out.println(num1 + " x " + num2 + " = " + producto);
+        
+        if(num2 == 0)
+        {
+            if(num1 == 0)
+            {
+                System.out.println(num1 + " / " + num2 + " = " + "Indeterminación");
+            }
+            
+            System.out.println(num1 + " / " + num2 + " = " + "Infinito");
+            
+        }else{
+            division = num1 / num2;
+            System.out.println(num1 + " / " + num2 + " = " + division);
+        }
     }
     //9. Escribe un programa que pide la edad por teclado y nos muestra el mensaje de “eres mayor de edad” o el mensaje de “eres menor de edad”.
     public static void ejercicio9()
